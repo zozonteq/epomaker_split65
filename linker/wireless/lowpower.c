@@ -142,7 +142,7 @@ bool lpwr_is_allow_timeout(void) {
         return false;
     }
 
-    if (manual_timeout || (timeout && (last_input_activity_elapsed() >= timeout))) {
+    if ((timeout != 0) && (manual_timeout || (last_input_activity_elapsed() >= timeout))) {
         manual_timeout = false;
         return true;
     }
