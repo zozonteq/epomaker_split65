@@ -3,6 +3,9 @@
 
 #pragma once
 
+#define BOOTMAGIC_ROW 1
+#define BOOTMAGIC_COL 0
+
 #define USB_POWER_EN_PIN                    B1 // USB ENABLE pin
 #define LED_POWER_EN_PIN                    A5 // LED ENABLE pin
 #define LED_POWER_EN2_PIN                    A8 // LED ENABLE pin
