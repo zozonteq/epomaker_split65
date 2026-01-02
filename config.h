@@ -23,23 +23,31 @@
 #define MD_BT1_NAME                         "Split65-1"
 #define MD_BT2_NAME                         "Split65-2"
 #define MD_BT3_NAME                         "Split65-3"
+#define MD_BT4_NAME                         "Split65-4"
+#define MD_BT5_NAME                         "Split65-5"
 #define MD_DONGLE_PRODUCT                   "2.4G Dongle"
 
 /* Device Connection RGB Indicator Light Index And Color */
 #define HS_RGB_BLINK_INDEX_BT1              17
 #define HS_RGB_BLINK_INDEX_BT2              18
 #define HS_RGB_BLINK_INDEX_BT3              19
-#define HS_RGB_BLINK_INDEX_2G4              20
+#define HS_RGB_BLINK_INDEX_BT4              20
+#define HS_RGB_BLINK_INDEX_BT5              21
+#define HS_RGB_BLINK_INDEX_2G4              22 // todo: 適当な位置にしている
 
 #define HS_LBACK_COLOR_BT1                  RGB_BLUE
 #define HS_LBACK_COLOR_BT2                  RGB_BLUE
 #define HS_LBACK_COLOR_BT3                  RGB_BLUE
+#define HS_LBACK_COLOR_BT4                  RGB_BLUE
+#define HS_LBACK_COLOR_BT5                  RGB_BLUE
 #define HS_LBACK_COLOR_2G4                  RGB_RED
 #define HS_LBACK_COLOR_USB                  RGB_GREEN
 
 #define HS_PAIR_COLOR_BT1                   RGB_BLUE
 #define HS_PAIR_COLOR_BT2                   RGB_BLUE
 #define HS_PAIR_COLOR_BT3                   RGB_BLUE
+#define HS_PAIR_COLOR_BT4                   RGB_BLUE
+#define HS_PAIR_COLOR_BT5                   RGB_BLUE
 #define HS_PAIR_COLOR_2G4                   RGB_RED
 #define HS_PAIR_COLOR_USB                   RGB_GREEN
 

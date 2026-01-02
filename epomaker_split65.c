@@ -300,6 +300,22 @@ uint32_t wls_process_long_press(uint32_t trigger_time, void *cb_arg) {
                 wireless_devs_change(wireless_get_current_devs(), DEVS_BT3, true);
             }
         } break;
+
+        case KC_BT4: {
+            uint8_t mode = confinfo.devs;
+            hs_modeio_detection(true, &mode, confinfo.last_btdevs);
+            if ((mode == hs_bt) || (mode == hs_wireless) || (mode == hs_none)) {
+                wireless_devs_change(wireless_get_current_devs(), DEVS_BT4, true);
+            }
+        } break;
+
+        case KC_BT5: {
+            uint8_t mode = confinfo.devs;
+            hs_modeio_detection(true, &mode, confinfo.last_btdevs);
+            if ((mode == hs_bt) || (mode == hs_wireless) || (mode == hs_none)) {
+                wireless_devs_change(wireless_get_current_devs(), DEVS_BT5, true);
+            }
+        } break;
         case KC_2G4: {
             uint8_t mode = confinfo.devs;
             hs_modeio_detection(true, &mode, confinfo.last_btdevs);
@@ -364,6 +380,22 @@ bool process_record_wls(uint16_t keycode, keyrecord_t *record) {
             hs_modeio_detection(true, &mode, confinfo.last_btdevs);
             if ((mode == hs_bt) || (mode == hs_wireless) || (mode == hs_none)) {
                 WLS_KEYCODE_EXEC(DEVS_BT3);
+                hs_rgb_blink_set_timer(timer_read32());
+            }
+        } break;
+        case KC_BT4: {
+            uint8_t mode = confinfo.devs;
+            hs_modeio_detection(true, &mode, confinfo.last_btdevs);
+            if ((mode == hs_bt) || (mode == hs_wireless) || (mode == hs_none)) {
+                WLS_KEYCODE_EXEC(DEVS_BT4);
+                hs_rgb_blink_set_timer(timer_read32());
+            }
+        } break;
+        case KC_BT5: {
+            uint8_t mode = confinfo.devs;
+            hs_modeio_detection(true, &mode, confinfo.last_btdevs);
+            if ((mode == hs_bt) || (mode == hs_wireless) || (mode == hs_none)) {
+                WLS_KEYCODE_EXEC(DEVS_BT5);
                 hs_rgb_blink_set_timer(timer_read32());
             }
         } break;
@@ -1235,16 +1267,16 @@ void wireless_devs_change_kb(uint8_t old_devs, uint8_t new_devs, bool reset) {
         } break;
         case DEVS_BT4: {
             if (reset) {
-                rgb_matrix_wls_indicator_set(41, (RGB){RGB_BLUE}, 200, 1);
+                 rgb_matrix_wls_indicator_set(HS_RGB_BLINK_INDEX_BT4, (RGB){HS_LBACK_COLOR_BT4}, 200, 1);
             } else {
-                rgb_matrix_wls_indicator_set(41, (RGB){RGB_BLUE}, 500, 1);
+                 rgb_matrix_wls_indicator_set(HS_RGB_BLINK_INDEX_BT4, (RGB){HS_LBACK_COLOR_BT4}, 500, 1);
             }
         } break;
         case DEVS_BT5: {
             if (reset) {
-                rgb_matrix_wls_indicator_set(42, (RGB){RGB_BLUE}, 200, 1);
+                 rgb_matrix_wls_indicator_set(HS_RGB_BLINK_INDEX_BT5, (RGB){HS_LBACK_COLOR_BT5}, 200, 1);
             } else {
-                rgb_matrix_wls_indicator_set(42, (RGB){RGB_BLUE}, 500, 1);
+                 rgb_matrix_wls_indicator_set(HS_RGB_BLINK_INDEX_BT5, (RGB){HS_LBACK_COLOR_BT5}, 500, 1);
             }
         } break;
         case DEVS_2G4: {
