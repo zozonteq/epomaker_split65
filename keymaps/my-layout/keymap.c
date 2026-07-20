@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_GFL] = LAYOUT( /* Game function layer (QWERTY)*/
         KC_GRV,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,                KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,   EE_CLR,  _______,
         RGB_MOD,  KC_BT1,   KC_BT2,   KC_BT3,   KC_BT4,   KC_BT5,               _______,  _______,  _______,  _______,  _______,  RGB_HUD,  RGB_HUI,  _______, KC_INS,
-        _______,  TO(_BL),  KC_S,     _______,  _______,  TO(_GBL),             KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  RGB_SAD,  RGB_SAI,  _______,           KC_HOME,
+        _______,  TO(_BL),  KC_S,     _______,  _______,  TO(_BL),              KC_LEFT,  KC_DOWN,  KC_UP,    KC_RGHT,  RGB_SAD,  RGB_SAI,  _______,           KC_HOME,
         KC_LSFT,  _______,  RGB_TOG,  _______,  _______,  _______,              NK_TOGG,  _______,  _______,  _______,  _______,            _______,  RGB_VAI, KC_END,
         KC_LCTL,  GU_TOGG,  _______,  KC_BATQ,                                  KC_BATQ,  _______,  _______,  _______,                      RGB_SPD,  RGB_VAD, RGB_SPI),
 

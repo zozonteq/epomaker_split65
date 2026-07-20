@@ -1112,10 +1112,8 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 rgb_matrix_hs_set_remain_time(HS_RGB_BLINK_INDEX_MAC, 0);
                 rgb_matrix_hs_indicator_set(HS_RGB_BLINK_INDEX_WIN, (RGB){RGB_WHITE}, 250, 3);
-                if (keymap_is_mac_system()) {
-                    set_single_persistent_default_layer(_BL);
-                    layer_move(0);
-                }
+                set_single_persistent_default_layer(_BL);
+                layer_move(0);
             }
 
             return false;
@@ -1124,10 +1122,8 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 rgb_matrix_hs_set_remain_time(HS_RGB_BLINK_INDEX_WIN, 0);
                 rgb_matrix_hs_indicator_set(HS_RGB_BLINK_INDEX_MAC, (RGB){RGB_WHITE}, 250, 3);
-                if (!keymap_is_mac_system()) {
-                    set_single_persistent_default_layer(_MBL);
-                    layer_move(0);
-                }
+                set_single_persistent_default_layer(_MBL);
+                layer_move(0);
             }
 
             return false;
